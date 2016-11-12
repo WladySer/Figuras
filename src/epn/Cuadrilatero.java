@@ -100,7 +100,7 @@ public class Cuadrilatero extends FiguraGeometrica{
 			pend4=((a.getY()-d.getY())/(a.getX()-d.getX()));
 				
 		
-		if(d1==d3 && d2==d4 && pend1==pend3 && pend2==pend4){
+		if((d1==d3 && d2==d4 && pend1==pend3 && pend2==pend4) || (pend1*pend2==-1 && pend2*pend3==-1 && pend3*pend4==-1 && pend4*pend1==-1)){
 			if(d1==d2 && d3==d4){
 				System.out.println("La figura es un cuadrado");
 			}
