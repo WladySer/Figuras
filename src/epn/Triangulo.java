@@ -37,8 +37,8 @@ public class Triangulo extends FiguraGeometrica{
 	@Override
 	public double calculoArea() {
 		double d1 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
-		double d2 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
-		double d3 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
+		double d2 = Math.sqrt(Math.pow((c.getX()-b.getX()), 2)+Math.pow((c.getY()-b.getY()), 2));
+		double d3 = Math.sqrt(Math.pow((a.getX()-c.getX()), 2)+Math.pow((a.getY()-c.getY()), 2));
 		double semiPerim = (d1+d2+d3)/2;
 		double area = Math.sqrt(semiPerim*(semiPerim-d1)*(semiPerim-d2)*(semiPerim-d3));
 		return area;
@@ -47,8 +47,8 @@ public class Triangulo extends FiguraGeometrica{
 	@Override
 	public double perimetro() {
 		double d1 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
-		double d2 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
-		double d3 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
+		double d2 = Math.sqrt(Math.pow((c.getX()-b.getX()), 2)+Math.pow((c.getY()-b.getY()), 2));
+		double d3 = Math.sqrt(Math.pow((a.getX()-c.getX()), 2)+Math.pow((a.getY()-c.getY()), 2));
 		double perim = d1+d2+d3;
 		return perim;
 	}
@@ -61,8 +61,8 @@ public class Triangulo extends FiguraGeometrica{
 	@Override
 	public Boolean Validacion() {
 		double d1 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
-		double d2 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
-		double d3 = Math.sqrt(Math.pow((b.getX()-a.getX()), 2)+Math.pow((b.getY()-a.getY()), 2));
+		double d2 = Math.sqrt(Math.pow((c.getX()-b.getX()), 2)+Math.pow((c.getY()-b.getY()), 2));
+		double d3 = Math.sqrt(Math.pow((a.getX()-c.getX()), 2)+Math.pow((a.getY()-c.getY()), 2));
 		if(d1==d2 && d2==d3){
 			System.out.println("El triangulo es equilatero");
 		}
